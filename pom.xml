@@ -10,7 +10,7 @@
     </parent>
 
     <groupId>com.buschmais.jqassistant.plugin</groupId>
-    <artifactId>jqassistant.plugin.java8</artifactId>
+    <artifactId>jqa-java8-plugin</artifactId>
 
     <build>
         <plugins>
