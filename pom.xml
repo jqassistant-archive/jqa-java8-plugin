@@ -11,6 +11,8 @@
 
     <groupId>com.buschmais.jqassistant.plugin</groupId>
     <artifactId>java8</artifactId>
+    <version>1.2-SNAPSHOT</version>
+
     <name>jQAssistant Java 8 Plugin</name>
 
     <organization>
