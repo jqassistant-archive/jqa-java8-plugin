@@ -33,6 +33,13 @@
         </license>
     </licenses>
 
+    <scm>
+        <connection>scm:git:git@github.com:buschmais/jqa-java8-plugin.git</connection>
+        <developerConnection>scm:git:git@github.com:buschmais/jqa-java8-plugin.git</developerConnection>
+        <url>https://github.com/buschmais/jqa-java8-plugin</url>
+        <tag>HEAD</tag>
+    </scm>
+
     <properties>
         <jqa-java-plugin.version>1.2-SNAPSHOT</jqa-java-plugin.version>
         <jqa-plugin-common.version>1.2-SNAPSHOT</jqa-plugin-common.version>
