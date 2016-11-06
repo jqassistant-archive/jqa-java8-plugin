@@ -1,0 +1,6 @@
+
+= jQAssistant JUnit Plugin Release Notes
+
+include::1.2.adoc[]
+
+
