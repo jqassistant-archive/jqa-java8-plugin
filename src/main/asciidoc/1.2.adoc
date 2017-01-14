@@ -1,3 +1,6 @@
+//
+//
+//
 == jQAssistant Java 8 Plugin Version 1.2
 
 - Maven coordinates changed from `com.buschmais.jqassistant.plugin:jqassistant.plugin.java8`
