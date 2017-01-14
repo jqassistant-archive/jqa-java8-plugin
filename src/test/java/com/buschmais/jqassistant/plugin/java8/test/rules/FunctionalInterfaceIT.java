@@ -3,14 +3,12 @@ package com.buschmais.jqassistant.plugin.java8.test.rules;
 import static com.buschmais.jqassistant.core.analysis.api.Result.Status.SUCCESS;
 import static com.buschmais.jqassistant.plugin.java.test.matcher.TypeDescriptorMatcher.typeDescriptor;
 import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.core.IsCollectionContaining.hasItem;
+import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.junit.Assert.assertThat;
 
-import java.io.IOException;
-
+import com.buschmais.jqassistant.plugin.java8.test.set.rules.FunctionalInterfaceWithoutAnnotation;
 import org.junit.Test;
 
-import com.buschmais.jqassistant.core.analysis.api.AnalysisException;
 import com.buschmais.jqassistant.plugin.java.test.AbstractJavaPluginIT;
 import com.buschmais.jqassistant.plugin.java8.test.set.rules.FunctionalInterface;
 
@@ -29,11 +27,15 @@ public class FunctionalInterfaceIT extends AbstractJavaPluginIT {
      */
     @Test
     public void functionalInterface() throws Exception {
-        scanClasses(com.buschmais.jqassistant.plugin.java8.test.set.rules.FunctionalInterface.class);
+        scanClasses(com.buschmais.jqassistant.plugin.java8.test.set.rules.FunctionalInterface.class,
+                    com.buschmais.jqassistant.plugin.java8.test.set.rules.MarkerInterface.class,
+                    com.buschmais.jqassistant.plugin.java8.test.set.rules.NonFunctionalInterface.class,
+                    com.buschmais.jqassistant.plugin.java8.test.set.rules.FunctionalInterfaceWithoutAnnotation.class);
         assertThat(applyConcept("java8:FunctionalInterface").getStatus(), equalTo(SUCCESS));
         store.beginTransaction();
         TestResult result = query("MATCH (fi:Type:FunctionalInterface) RETURN fi");
-        assertThat(result.getColumn("fi"), hasItem(typeDescriptor(FunctionalInterface.class)));
+        assertThat(result.getColumn("fi"), containsInAnyOrder(typeDescriptor(FunctionalInterface.class),
+                                                              typeDescriptor(FunctionalInterfaceWithoutAnnotation.class)));
         store.commitTransaction();
     }
 }

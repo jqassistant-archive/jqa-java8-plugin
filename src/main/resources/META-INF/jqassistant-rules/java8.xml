@@ -1,24 +1,27 @@
 <jqa:jqassistant-rules xmlns:jqa="http://www.buschmais.com/jqassistant/core/analysis/rules/schema/v1.0">
 
     <concept id="java8:FunctionalInterface">
-        <description>Labels functional interfaces (i.e. to be used as lambda expressions) with "FunctionalInterface".</description>
+        <description>Labels functional interfaces (i.e. to be used as lambda expressions)
+            with `FunctionalInterface`.</description>
         <cypher><![CDATA[
             MATCH
-              (functionalInterface:Interface)-[:ANNOTATED_BY]-()-[:OF_TYPE]->(functionalInterfaceType)
+                (i:Java:Interface)-[:DECLARES]->(m:Member:Java:Method {abstract: true})
+            WITH
+                i, count(m) AS methods
             WHERE
-              functionalInterfaceType.fqn = 'java.lang.FunctionalInterface'
+                methods = 1
             SET
-              functionalInterface:FunctionalInterface
+                i:FunctionalInterface
             RETURN
-              functionalInterface AS FunctionalInterface
+                i AS FunctionInterface
         ]]></cypher>
     </concept>
 
     <concept id="java8:DefaultMethod">
-        <description>Labels default methods of interfaces with "Default".</description>
+        <description>Labels default methods of interfaces with `Default`.</description>
         <cypher><![CDATA[
             MATCH
-              (type:Type:Interface)-[:DECLARES]->(defaultMethod:Method)
+              (type:Type:Java:Interface)-[:DECLARES]->(defaultMethod:Java:Method)
             WHERE NOT
               has(defaultMethod.abstract)
             SET
