@@ -1,5 +1,5 @@
 
-= jQAssistant JUnit Plugin Release Notes
+= jQAssistant Java 8 Plugin Release Notes
 
 include::1.2.adoc[]
 
