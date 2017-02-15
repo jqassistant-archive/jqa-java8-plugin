@@ -1,7 +1,8 @@
 //
 //
 //
-== jQAssistant Java 8 Plugin Version 1.3
+ifndef::jqa-in-manual[== Version 1.3]
+ifdef::jqa-in-manual[== Java 8 Plugin 1.3]
 
 - Fix for bug https://github.com/buschmais/jqa-java8-plugin/issues/1[Concept `java8:FunctionalInterface` is not complete^].
   Now the Java 8 plugin labels all Java interfaces with `FunctionalInterface`
