@@ -23,7 +23,7 @@
             MATCH
               (type:Type:Java:Interface)-[:DECLARES]->(defaultMethod:Java:Method)
             WHERE NOT
-              has(defaultMethod.abstract)
+              exists(defaultMethod.abstract)
             SET
               defaultMethod:Default
             RETURN
