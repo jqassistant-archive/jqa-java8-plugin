@@ -6,11 +6,11 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.junit.Assert.assertThat;
 
-import com.buschmais.jqassistant.plugin.java8.test.set.rules.FunctionalInterfaceWithoutAnnotation;
 import org.junit.Test;
 
 import com.buschmais.jqassistant.plugin.java.test.AbstractJavaPluginIT;
 import com.buschmais.jqassistant.plugin.java8.test.set.rules.FunctionalInterface;
+import com.buschmais.jqassistant.plugin.java8.test.set.rules.FunctionalInterfaceWithoutAnnotation;
 
 /**
  * Tests for the concept java8:FunctionalInterface.
@@ -19,10 +19,8 @@ public class FunctionalInterfaceIT extends AbstractJavaPluginIT {
 
     /**
      * Verifies the concept "java8:FunctionalInterface".
-     * 
+     *
      * @throws java.io.IOException
-     *             If the test fails.
-     * @throws com.buschmais.jqassistant.core.analysis.api.AnalysisException
      *             If the test fails.
      */
     @Test

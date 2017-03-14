@@ -18,10 +18,8 @@ public class DefaultMethodIT extends AbstractJavaPluginIT {
 
     /**
      * Verifies the concept "java8:DefaultMethod".
-     * 
+     *
      * @throws java.io.IOException
-     *             If the test fails.
-     * @throws com.buschmais.jqassistant.core.analysis.api.AnalysisException
      *             If the test fails.
      */
     @Test
