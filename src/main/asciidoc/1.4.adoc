@@ -4,4 +4,5 @@
 ifndef::jqa-in-manual[== Version 1.4]
 ifdef::jqa-in-manual[== Java 8 Plugin 1.4]
 
-TBW
+* Added concept `java8:LambdaMethod` for identifying lambda expressions
+

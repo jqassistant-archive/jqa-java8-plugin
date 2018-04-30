@@ -31,4 +31,29 @@
         ]]></cypher>
     </concept>
 
+    <concept id="java8:LambdaMethod">
+        <description>Labels lambda methods with `Lambda` and creates a relation `DECLARES` from the declaring method.</description>
+        <cypher><![CDATA[
+            MATCH
+              (type:Type)-[:DECLARES]->(lambda:Method)
+            WHERE
+              exists(lambda.synthetic)
+              and exists(lambda.static)
+              and lambda.name starts with("lambda$")
+            SET
+              lambda:Lambda
+            WITH
+              type, lambda
+            MATCH
+              (type)-[:DECLARES]->(method:Method)
+            WHERE
+              method <> lambda
+              and method.firstLineNumber <= lambda.firstLineNumber
+              and method.lastLineNumber >= lambda.lastLineNumber
+            MERGE
+              (method)-[:DECLARES]->(lambda)
+            RETURN
+              method, collect(lambda)
+        ]]></cypher>
+    </concept>
 </jqa:jqassistant-rules>
