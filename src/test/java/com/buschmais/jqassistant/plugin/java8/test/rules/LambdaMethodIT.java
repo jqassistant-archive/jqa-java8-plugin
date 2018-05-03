@@ -1,13 +1,13 @@
 package com.buschmais.jqassistant.plugin.java8.test.rules;
 
+import java.util.List;
+
 import com.buschmais.jqassistant.plugin.common.test.AbstractPluginIT;
 import com.buschmais.jqassistant.plugin.java.api.model.MethodDescriptor;
 import com.buschmais.jqassistant.plugin.java.test.AbstractJavaPluginIT;
-import com.buschmais.jqassistant.plugin.java8.test.set.rules.DefaultMethod;
 import com.buschmais.jqassistant.plugin.java8.test.set.rules.LambdaMethod;
-import org.junit.Test;
 
-import java.util.List;
+import org.junit.Test;
 
 import static com.buschmais.jqassistant.core.analysis.api.Result.Status.SUCCESS;
 import static com.buschmais.jqassistant.plugin.java.test.matcher.MethodDescriptorMatcher.methodDescriptor;
