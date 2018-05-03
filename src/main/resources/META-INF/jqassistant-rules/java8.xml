@@ -35,7 +35,7 @@
         <description>Labels lambda methods with `Lambda` and creates a relation `DECLARES` from the declaring method.</description>
         <cypher><![CDATA[
             MATCH
-              (type:Type)-[:DECLARES]->(lambda:Method)
+              (type:Java:Type)-[:DECLARES]->(lambda:Method)
             WHERE
               exists(lambda.synthetic)
               and exists(lambda.static)
@@ -51,7 +51,7 @@
               and method.firstLineNumber <= lambda.firstLineNumber
               and method.lastLineNumber >= lambda.lastLineNumber
             MERGE
-              (method)-[:DECLARES]->(lambda)
+              (method)-[:DECLARES_LAMBDA]->(lambda)
             RETURN
               method, collect(lambda)
         ]]></cypher>
