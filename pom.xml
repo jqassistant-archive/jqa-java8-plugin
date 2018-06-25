@@ -67,7 +67,7 @@
             <groupId>com.buschmais.jqassistant.plugin</groupId>
             <artifactId>common</artifactId>
             <type>test-jar</type>
-            <version>${jqa-java-plugin.version}</version>
+            <version>${jqa-plugin-common.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
