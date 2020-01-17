@@ -1,10 +1,13 @@
 = jQAssistant Java 8 Plugin
 
 This is the Java Plugin of https://www.jqassistant.org[jQAssistant^].
-It enables jQAssistant to scan and to analyze Java 8 related
-artifacts like:
+It enables jQAssistant to scan and to analyze Java 8 related artifacts like:
 
 - functional interfaces
 - default methods
 
 For more information on jQAssistant see https://www.jqassistant.org[^].
+
+NOTE: This plugin is deprecated.
+All concepts have been moved to the Java plugin.
+

@@ -3,6 +3,7 @@
     <concept id="java8:FunctionalInterface">
         <description>Labels functional interfaces (i.e. to be used as lambda expressions)
             with `FunctionalInterface`.</description>
+        <deprecated>This concept has been replaced by "java:FunctionalInterface".</deprecated>
         <cypher><![CDATA[
             MATCH
                 (i:Java:Interface)-[:DECLARES]->(m:Member:Java:Method {abstract: true})
@@ -19,6 +20,7 @@
 
     <concept id="java8:DefaultMethod">
         <description>Labels default methods of interfaces with `Default`.</description>
+        <deprecated>This concept has been replaced by "java:DefaultMethod".</deprecated>
         <cypher><![CDATA[
             MATCH
               (type:Type:Java:Interface)-[:DECLARES]->(defaultMethod:Java:Method)
@@ -33,6 +35,7 @@
 
     <concept id="java8:LambdaMethod">
         <description>Labels lambda methods with `Lambda` and creates a relation `DECLARES` from the declaring method.</description>
+        <deprecated>This concept has been replaced by "java:LambdaMethod".</deprecated>
         <cypher><![CDATA[
             MATCH
               (type:Java:Type)-[:DECLARES]->(lambda:Method)

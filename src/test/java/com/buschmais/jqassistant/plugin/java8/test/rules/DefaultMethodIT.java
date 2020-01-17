@@ -1,5 +1,6 @@
 package com.buschmais.jqassistant.plugin.java8.test.rules;
 
+import com.buschmais.jqassistant.core.shared.annotation.ToBeRemovedInVersion;
 import com.buschmais.jqassistant.plugin.java.test.AbstractJavaPluginIT;
 import com.buschmais.jqassistant.plugin.java8.test.set.rules.DefaultMethod;
 
@@ -14,6 +15,8 @@ import static org.junit.Assert.assertThat;
 /**
  * Tests for the concept java8:DefaultMethod.
  */
+@Deprecated
+@ToBeRemovedInVersion(major = 1, minor = 9)
 public class DefaultMethodIT extends AbstractJavaPluginIT {
 
     /**

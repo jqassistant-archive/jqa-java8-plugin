@@ -2,6 +2,7 @@ package com.buschmais.jqassistant.plugin.java8.test.rules;
 
 import java.util.List;
 
+import com.buschmais.jqassistant.core.shared.annotation.ToBeRemovedInVersion;
 import com.buschmais.jqassistant.plugin.common.test.AbstractPluginIT;
 import com.buschmais.jqassistant.plugin.java.api.model.MethodDescriptor;
 import com.buschmais.jqassistant.plugin.java.test.AbstractJavaPluginIT;
@@ -15,6 +16,8 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.core.IsCollectionContaining.hasItem;
 import static org.junit.Assert.assertThat;
 
+@Deprecated
+@ToBeRemovedInVersion(major = 1, minor = 9)
 public class LambdaMethodIT extends AbstractJavaPluginIT {
 
     /**

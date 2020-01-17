@@ -4,4 +4,8 @@
 ifndef::jqa-in-manual[== Version 1.8.0]
 ifdef::jqa-in-manual[== Java 8 Plugin 1.8.0]
 
-No changes.
+* This plugin has been deprecated, the concepts have been migrated to the Java plugin:
+** `java8:FunctionalInterface` -> `java:FunctionalInterface`
+** `java8:DefaultMethod` -> `java:DefaultMethod`
+** `java8:LambdaMethod` -> `java:LambdaMethod`
+
