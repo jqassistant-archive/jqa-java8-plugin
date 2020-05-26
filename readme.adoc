@@ -1,5 +1,7 @@
 = jQAssistant Java 8 Plugin
 
+image::https://github.com/jQAssistant/jqa-java8-plugin/workflows/jQA%20Standard%20CI%20Build/badge.svg[jQA Standard CI Build]
+
 This is the Java Plugin of https://www.jqassistant.org[jQAssistant^].
 It enables jQAssistant to scan and to analyze Java 8 related artifacts like:
 
